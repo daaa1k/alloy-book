@@ -21,9 +21,12 @@ pred someItems {
 }
 run someItems for 3
 
-assert noDupes { all i: Item | lone Inventory.contains }
-check noDupes for 3
+assert allItemsListed { all i: Item | i in Inventory.contains }
+check allItemsListed for 3
 ```
+
+`check` 側の例は、**「宇宙にいる** `Item` **はみな在庫** `contains` **に入っている**」と主張する、という解釈にしています。`Item` の一部だけが在庫に載っている世界を許す `run` の解では、この主張は**成り立たない**ことが多く、**反例**（反証となるインスタンス）が出やすいです。  
+量化了な `i` を本文（`i in ...`）で**必ず使う**形にしてあり、**未使用変数**のコンパイラ警告が出ないようにしてあります。
 
 2. ツールバーから **`Execute`**（実行）— 上から順に、デフォルトで定義した `run` / `check` が走る動きを想定。実際の既定順は**版**で違うことがある。まず `run` 相当が選ばれていることを確認（メニューでコマンドを切り替えられる版もある）。  
 3. 結果（解あり/なし 等）を確認し、**`Show`**（あるいは Visualizer/Theme へ進む導線）でインスタンスを眺める。  
