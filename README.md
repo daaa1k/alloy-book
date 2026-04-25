@@ -36,7 +36,7 @@ CI で使うバイナリの版は、ワークフロー内の `MDBOOK_VERSION`（
 
 ## 原稿とサンプル
 
-- 章: `book/src/*.md`、目次: `book/src/SUMMARY.md`
+- 章: `book/src/*.md`、目次: `book/src/SUMMARY.md`（学習順は**価値の説明 → 短い体験 → 基礎**を意識し、[なぜ Alloy か](book/src/why-alloy.md) と [5分で価値を体験](book/src/quick-win.md) を前に出しています）
 - Alloy サンプル: リポジトリ直下の `examples/*.als`（教材と同内容を `book/src/examples/` にも置き、ビルド済みサイトからダウンロード／参照できるようにしています。更新するときは **両方**を揃えてください。）
 
 ## 貢献

@@ -1,5 +1,7 @@
 # 可変性とトレース（Alloy 6）
 
+本編では**時間と状態**の入り口に立つ章です。先に [言語の基礎](language-basics.md) と [Alloy Analyzer の操作](analyzer.md)（必要なら [Alloy Analyzer の UI 用語](analyzer-ui-glossary.md)）を済ませておくと、トレースの読み方がつかみやすいです。
+
 Alloy 6 では、**可変な状態**や**実行のトレース**を扱う表現が強化され、より「振る舞い」の探索に近づけます。一次情報は [Alloy 6 の紹介](https://alloytools.org/alloy6.html) と [ドキュメント](https://alloytools.org/documentation.html) を参照してください。
 
 ## 何のための章か

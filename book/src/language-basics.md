@@ -1,12 +1,14 @@
 # 言語の基礎
 
+この章の**制約**（多重度、`fact`、`assert` 等）は、設計上こういう**問い**に答えるための表現です。「この関係の形は許されるか？」「想定する不変条件は常に成り立つか？」を、**小さなスコープ**の宇宙で手触りを確かめながら進めてください。画面の**ボタン名**と `run` / `check` の対応は [Alloy Analyzer の UI 用語](analyzer-ui-glossary.md) を参照。
+
 ## リレーションと多重度
 
 Alloy の中心は**関係**です。フィールド `f: A -> B` は、`A` の元と `B` の元の対応（任意の多対多）を表せます。`set` / `lone` / `one` / `some` 等多重度は、**この対応の形**に制約を与えます。
 
 ## 制約
 
-`fact { ... }` には、常に成り立たせたい事実を置きます。`pred` や `assert` とは使い分けの違いがあれど、**探索（`run`）** では `pred` をゴールにし、**検査（`check`）** では不変条件を `assert` に残す、という分け方が扱いやすいです。
+`fact { ... }` には、常に成り立たせたい事実を置きます。`pred` や `assert` とは使い分けの違いがあれど、**探索（`run`）** では `pred` をゴールにし、**検査（`check`）** では不変条件を `assert` に残す、という分け方が扱いやすいです。`check` を走らす画面操作は、GUI では **`Execute`**（結果はビルド表記の SAT/UNSAT 等。版依存）に対応します。対照表は [Alloy Analyzer の UI 用語](analyzer-ui-glossary.md) を参照。
 
 ## 量化子
 
@@ -18,4 +20,4 @@ Alloy の中心は**関係**です。フィールド `f: A -> B` は、`A` の�
 
 ## 次の章
 
-[Alloy Analyzer の操作](analyzer.md) で、ソルブの読み方と Visualizer、CLI への入口を扱います。
+[Alloy Analyzer の UI 用語](analyzer-ui-glossary.md) で用語の対照を押さえたうえで、[Alloy Analyzer の操作](analyzer.md) で、ソルブの読み方と Visualizer、CLI への入口を扱います。
