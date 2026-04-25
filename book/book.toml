@@ -1,0 +1,16 @@
+[book]
+title = "Alloy 学習ブック"
+description = "形式手法の Alloy と Alloy Analyzer（AlloyTools 配布）の導入から実践まで"
+authors = ["alloy-book contributors"]
+language = "ja"
+src = "src"
+
+[output.html]
+default-theme = "light"
+no-section-label = true
+git-repository-url = "https://github.com/daaa1k/alloy-book"
+edit-url-template = "https://github.com/daaa1k/alloy-book/edit/main/book/src/{path}"
+site-url = "https://daaa1k.github.io/alloy-book/"
+
+[output.html.search]
+enable = true
